@@ -1,11 +1,11 @@
 # ToDo App
-     This my docker image 
+This is my docker image 
 
 ## Docker Hub
        
-   My DockerHub link
+My DockerHub link
     
-    https://hub.docker.com/repository/docker/demops096/todoapp/tags/1.0.0
+https://hub.docker.com/repository/docker/demops096/todoapp/tags/1.0.0
 
 ### Step by step instruction
 
@@ -13,9 +13,22 @@
 
     git clone https://github.com/DemqN96/devops_todolist
 
-2. Build todoapp 
+2. Build local todoapp image
 
-    docker build -t demops096/todoapp:1.0.0 .
+    docker build -t todoapp:1.0.0 .
 
-3. docker run -d -p 8080:8080 demops096/todoapp:1.0.0
+3. Tag and push to Docker Hub
 
+    docker tag todoapp:1.0.0 demops096/todoapp:1.0.0
+    docker login
+    docker push demops096/todoapp:1.0.0
+
+4. Run the container
+
+    docker run -d -p 8080:8080 demops096/todoapp:1.0.0
+
+5. Access the application
+
+    Open http://localhost:8080/ in your browser
+    
+    Note: If you change the port mapping (e.g., -p 9000:8080), access the app at http://localhost:9000/
