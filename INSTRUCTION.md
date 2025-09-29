@@ -5,7 +5,7 @@ This is my docker image
        
 My DockerHub link
     
-https://hub.docker.com/repository/docker/demops096/todoapp/tags/1.0.0
+https://hub.docker.com/repository/docker/demops096/todoapp
 
 ### Step by step instruction
 
