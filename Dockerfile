@@ -15,7 +15,7 @@ FROM python:${PYTHON_VERSION}-slim AS run
 
 WORKDIR /app
 
-COPY --from=build /usr/local/lib/python3.9/site-packages /usr/local/lib/python3.9/site-packages
+COPY --from=build /usr/local/lib/python${PYTHON_VERSION%.*}/site-packages /usr/local/lib/python${PYTHON_VERSION%.*}/site-packages
 COPY --from=build /usr/local/bin /usr/local/bin
 
 COPY . .
